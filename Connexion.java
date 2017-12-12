@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
 public class Connexion extends javax.swing.JDialog {
 
     private InterfaceGraphique fenetre;
+    private static Personne profilConnecte;
 
     /**
      * Creates new form Connexion
@@ -175,11 +176,27 @@ public class Connexion extends javax.swing.JDialog {
                 ResultSet lignesRetournees = requete.executeQuery("select * from Utilisateurs where identifiant='" + identifiant + "' and mot_de_passe='" + mdp + "'");
                 if (lignesRetournees.next()) {
                     String nom = lignesRetournees.getString("nom");
-                    //Modifications de la Mission 2 à placer ici
+                    String role = lignesRetournees.getString("id_role");
 
                     this.fenetre.connecte(nom);
                     this.setVisible(false);
                     this.fenetre.majConnexion();
+
+                    switch (role) {
+                        case "1":
+                            this.fenetre.setInterfaceGraphiqueDirigeantVisible();
+                            break;
+                        case "2":
+                            this.fenetre.setInterfaceGraphiqueResponsableVisible();
+                            break;
+                        case "3":
+                            this.fenetre.setInterfaceGraphiqueEmployesVisible();
+                            break;
+                        default:
+                            JOptionPane.showMessageDialog(rootPane, "Impossible d'accéder à votre espace personnel, "
+                                    + "le responsable doit d'abord vous définir un rôle. ");
+                            break;
+                    }
 
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "identifiant ou mot de passe incorrect");

@@ -80,6 +80,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         nomjMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(430, 340));
         setResizable(false);
 
         jDesktopPaneAccueil.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,14 +102,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             .add(jDesktopPaneAccueilLayout.createSequentialGroup()
                 .add(128, 128, 128)
                 .add(jButtonConnexion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
         jDesktopPaneAccueilLayout.setVerticalGroup(
             jDesktopPaneAccueilLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneAccueilLayout.createSequentialGroup()
-                .add(129, 129, 129)
+                .add(117, 117, 117)
                 .add(jButtonConnexion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         jDesktopPaneEmploye.setBackground(new java.awt.Color(255, 255, 255));
@@ -128,16 +129,16 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jDesktopPaneEmployeLayout.setHorizontalGroup(
             jDesktopPaneEmployeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneEmployeLayout.createSequentialGroup()
-                .add(68, 68, 68)
+                .add(128, 128, 128)
                 .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         jDesktopPaneEmployeLayout.setVerticalGroup(
             jDesktopPaneEmployeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneEmployeLayout.createSequentialGroup()
-                .add(74, 74, 74)
+                .add(123, 123, 123)
                 .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         jDesktopPaneDirigeant.setBackground(new java.awt.Color(255, 255, 255));
@@ -176,26 +177,27 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             .add(jDesktopPaneDirigeantLayout.createSequentialGroup()
                 .add(129, 129, 129)
                 .add(jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonGenererCV2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGenererCV2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                         .add(jButtonGererRoles, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(jButtonInscription, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
         jDesktopPaneDirigeantLayout.setVerticalGroup(
             jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneDirigeantLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(55, 55, 55)
                 .add(jButtonGenererCV2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
+                .add(29, 29, 29)
                 .add(jButtonInscription, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
+                .add(34, 34, 34)
                 .add(jButtonGererRoles, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(25, 25, 25))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         jDesktopPaneResponsable.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPaneResponsable.setBorder(new javax.swing.border.MatteBorder(null));
+        jDesktopPaneResponsable.setPreferredSize(new java.awt.Dimension(410, 300));
 
         jButtonGererPositions.setText("Gérer les positions");
         jButtonGererPositions.addActionListener(new java.awt.event.ActionListener() {
@@ -223,16 +225,16 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 .add(jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jButtonGenererCV1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonGererPositions, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         jDesktopPaneResponsableLayout.setVerticalGroup(
             jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneResponsableLayout.createSequentialGroup()
-                .add(50, 50, 50)
+                .addContainerGap(72, Short.MAX_VALUE)
                 .add(jButtonGererPositions, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
+                .add(64, 64, 64)
                 .add(jButtonGenererCV1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .add(82, 82, 82))
         );
 
         fileMenuLogiciel.setMnemonic('f');
@@ -297,7 +299,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jDesktopPaneAccueil)
+                .add(jDesktopPaneAccueil, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
@@ -307,7 +309,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
-                    .add(jDesktopPaneResponsable)
+                    .add(jDesktopPaneResponsable, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(20, 20, 20)))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
@@ -319,22 +321,22 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .add(jDesktopPaneAccueil, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 0, Short.MAX_VALUE))
+                .add(0, 70, Short.MAX_VALUE))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
                     .add(jDesktopPaneDirigeant, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(114, Short.MAX_VALUE)))
+                    .addContainerGap(59, Short.MAX_VALUE)))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
                     .add(jDesktopPaneResponsable, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(108, Short.MAX_VALUE)))
+                    .addContainerGap(59, Short.MAX_VALUE)))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .add(59, 59, 59)
                     .add(jDesktopPaneEmploye, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(60, Short.MAX_VALUE)))
+                    .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
@@ -374,7 +376,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGererRolesActionPerformed
 
     private void jMenuItemInfosPersosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInfosPersosActionPerformed
-        fenGererInfosPersos = new GererInfosPersos(this, true);        
+        fenGererInfosPersos = new GererInfosPersos(this, true);
         this.fenGererInfosPersos.setVisible(true);
     }//GEN-LAST:event_jMenuItemInfosPersosActionPerformed
 
@@ -395,10 +397,10 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGenererCVActionPerformed
 
     private void jMenuItemFormationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFormationsActionPerformed
-        fenGererFormations = new GererFormations(this, true);        
+        fenGererFormations = new GererFormations(this, true);
         this.fenGererFormations.setVisible(true);
     }//GEN-LAST:event_jMenuItemFormationsActionPerformed
-    
+
     public void connecte(String leNom) {
         //maj de l'etat de la connexion
         this.connecte = true;
@@ -406,15 +408,34 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.nomjMenu.setText("Connecté en tant que : " + leNom);
         this.nomjMenu.setEnabled(false);
     }
-    
+
     public void deconnecte() {
         this.connecte = false;
         this.nomjMenu.setText(null);
     }
-    
+
     public void majConnexion() {
         deconnexionMenuItem.setEnabled(this.connecte);
         connexionMenuItem.setEnabled(!this.connecte);
+    }
+
+    public void setInterfaceGraphiqueDirigeantVisible() {
+        this.jDesktopPaneDirigeant.setVisible(true);
+        this.jDesktopPaneAccueil.setVisible(false);
+    }
+
+    public void setInterfaceGraphiqueResponsableVisible() {
+        this.jDesktopPaneResponsable.setVisible(true);
+        this.jDesktopPaneAccueil.setVisible(false);
+    }
+
+    public void setInterfaceGraphiqueEmployesVisible() {
+        this.jDesktopPaneEmploye.setVisible(true);
+        this.jDesktopPaneAccueil.setVisible(false);
+    }
+    
+        public void setInterfaceGraphiqueAccueilVisible() {
+        this.jDesktopPaneAccueil.setVisible(true);
     }
 
     /**

@@ -14,6 +14,7 @@ public class Personne {
     private String courriel;
     private String date_de_naissance;
     private String adresse;
+    private Integer idrole; 
 
     public String getNom() {
         return nom;
@@ -21,6 +22,14 @@ public class Personne {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public Integer getIdrole() {
+        return idrole;
+    }
+
+    public void setIdrole(Integer idrole) {
+        this.idrole = idrole;
     }
 
     public String getPrenom() {

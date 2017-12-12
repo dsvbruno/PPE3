@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -79,6 +81,8 @@ public class Inscription extends javax.swing.JDialog {
         jTextFieldEntreePromo = new javax.swing.JTextField();
         jTextFieldIdentifiant = new javax.swing.JTextField();
         jTextFieldSiteWeb = new javax.swing.JTextField();
+        jLabelRole = new javax.swing.JLabel();
+        jComboBoxRole = new javax.swing.JComboBox<>();
 
         setResizable(false);
 
@@ -184,6 +188,17 @@ public class Inscription extends javax.swing.JDialog {
             }
         });
 
+        jLabelRole.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelRole.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelRole.setText("Rôle");
+
+        jComboBoxRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employe ", "Responsable ", "Dirigeant" }));
+        jComboBoxRole.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxRoleActionPerformed(evt);
+            }
+        });
+
         jDesktopPaneBackground.setLayer(jLabelNom, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPaneBackground.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPaneBackground.setLayer(jTextFieldNom, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -215,6 +230,8 @@ public class Inscription extends javax.swing.JDialog {
         jDesktopPaneBackground.setLayer(jTextFieldEntreePromo, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPaneBackground.setLayer(jTextFieldIdentifiant, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPaneBackground.setLayer(jTextFieldSiteWeb, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPaneBackground.setLayer(jLabelRole, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPaneBackground.setLayer(jComboBoxRole, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPaneBackgroundLayout = new javax.swing.GroupLayout(jDesktopPaneBackground);
         jDesktopPaneBackground.setLayout(jDesktopPaneBackgroundLayout);
@@ -224,12 +241,6 @@ public class Inscription extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPaneBackgroundLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButtonTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(190, 190, 190))
                     .addGroup(jDesktopPaneBackgroundLayout.createSequentialGroup()
                         .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jDesktopPaneBackgroundLayout.createSequentialGroup()
@@ -282,7 +293,15 @@ public class Inscription extends javax.swing.JDialog {
                                 .addGap(38, 38, 38)
                                 .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextFieldMail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldPrenom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jTextFieldPrenom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPaneBackgroundLayout.createSequentialGroup()
+                        .addComponent(jLabelRole, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBoxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(jButtonTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jDesktopPaneBackgroundLayout.setVerticalGroup(
@@ -338,7 +357,13 @@ public class Inscription extends javax.swing.JDialog {
                     .addComponent(jLabelConfMDP)
                     .addComponent(jPasswordFieldConfMDP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addGroup(jDesktopPaneBackgroundLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jDesktopPaneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelRole)
+                            .addComponent(jComboBoxRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonTest)
                 .addContainerGap(20, Short.MAX_VALUE))
@@ -405,7 +430,8 @@ public class Inscription extends javax.swing.JDialog {
                 String identifiant = jTextFieldIdentifiant.getText();
                 String mdp = jPasswordFieldMDP.getText();
                 String conf_mdp = jPasswordFieldConfMDP.getText();
-
+                Integer idrole = jComboBoxRole.getSelectedIndex()+1;
+                
                 String mailsql = "SELECT mail FROM utilisateurs WHERE mail = '" + mail + "'";
                 ResultSet mailRetournee = requete.executeQuery(mailsql);
 
@@ -419,13 +445,15 @@ public class Inscription extends javax.swing.JDialog {
                     // ici on appelle md5 membre static de la classe outils
                     mdp = Outils.md5(mdp);
 
-                    String reqsql = "INSERT INTO `utilisateurs`(`nom`, `prenom`, "
+                    String reqsql = "INSERT INTO `utilisateurs`(`id_role`, `nom`, `prenom`, "
                             + "`adresse_rue`, `adresse_cp`, `adresse_ville`, `tel_personnel`, `tel_professionnel`, `mail`, "
                             + "`site_web`, `annee_entree_promotion`, `annee_sortie_promotion`, `identifiant`, `mot_de_passe`) VALUES "
-                            + "('" + nom + "', '" + prenom + "', '" + adresse_rue + "', '" + adresse_cp + "', '" + adresse_ville + "', '"
+                            + "('" + idrole +"', '" + nom + "', '" + prenom + "', '" + adresse_rue + "', '" + adresse_cp + "', '" + adresse_ville + "', '"
                             + tel_personnel + "', '" + tel_professionnel + "', '" + mail + "', '" + site_web + "', '" + annee_entree_promo + "', '"
                             + annee_sortie_promo + "', '" + identifiant + "', '" + mdp + "')";
 
+                    System.out.println(reqsql);
+                    
                     Integer lignesRetournees = requete.executeUpdate(reqsql);
                     if (lignesRetournees == 1) {
                         JOptionPane.showMessageDialog(rootPane, "Inscription réussie");
@@ -467,6 +495,10 @@ public class Inscription extends javax.swing.JDialog {
     private void jPasswordFieldConfMDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldConfMDPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldConfMDPActionPerformed
+
+    private void jComboBoxRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxRoleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxRoleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -514,6 +546,7 @@ public class Inscription extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonTest;
+    private javax.swing.JComboBox<String> jComboBoxRole;
     private javax.swing.JDesktopPane jDesktopPaneBackground;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -528,6 +561,7 @@ public class Inscription extends javax.swing.JDialog {
     private javax.swing.JLabel jLabelMobile;
     private javax.swing.JLabel jLabelNom;
     private javax.swing.JLabel jLabelPromotion;
+    private javax.swing.JLabel jLabelRole;
     private javax.swing.JLabel jLabelTel;
     private javax.swing.JLabel jLabelVille;
     private javax.swing.JPasswordField jPasswordFieldConfMDP;
