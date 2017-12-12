@@ -134,7 +134,7 @@ public class Inscription extends javax.swing.JDialog {
         });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("S'inscrire");
+        jButton1.setText("Créer l'employé");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -158,7 +158,7 @@ public class Inscription extends javax.swing.JDialog {
 
         jLabelMobile.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelMobile.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelMobile.setText("Mobile");
+        jLabelMobile.setText("Mobile Perso.");
 
         jTextFieldMobile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +168,7 @@ public class Inscription extends javax.swing.JDialog {
 
         jLabelTel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelTel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelTel.setText("Telephone");
+        jLabelTel.setText("Tel. Profesionnel");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);

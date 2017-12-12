@@ -16,7 +16,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
      * attribut qui indique si l'etudiant est connecté ou non
      */
     private boolean connecte;
-    private Etudiants infoEtudiant;
+    private Responsables infoEtudiant;
 
     /**
      * interface graphique
@@ -24,6 +24,11 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private Connexion fenConnexion;
     private Deconnexion fenDeconnexion;
     private Inscription fenInscription;
+    private InterfaceGraphique fenEmployes;
+    private InterfaceGraphique fenResponsables;
+    private InterfaceGraphique fenDirigeants;
+    private GererInfosPersos fenGererInfosPersos;
+    private GererFormations fenGererFormations;
 
     /**
      * constructeur : Creates new form InterfaceGraphique
@@ -39,7 +44,9 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         //titre 
         this.setTitle("Gestion des étudiants du bts sio");
-
+        this.jDesktopPaneDirigeant.setVisible(false);
+        this.jDesktopPaneResponsable.setVisible(false);
+        this.jDesktopPaneEmploye.setVisible(false);
     }
 
     /**
@@ -51,35 +58,32 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem1 = new javax.swing.JMenuItem();
-        desktopPane = new javax.swing.JDesktopPane();
-        jButtonInscription = new javax.swing.JButton();
+        jDesktopPaneAccueil = new javax.swing.JDesktopPane();
         jButtonConnexion = new javax.swing.JButton();
+        jDesktopPaneEmploye = new javax.swing.JDesktopPane();
+        jButtonGenererCV = new javax.swing.JButton();
+        jDesktopPaneDirigeant = new javax.swing.JDesktopPane();
+        jButtonInscription = new javax.swing.JButton();
+        jButtonGererRoles = new javax.swing.JButton();
+        jButtonGenererCV2 = new javax.swing.JButton();
+        jDesktopPaneResponsable = new javax.swing.JDesktopPane();
+        jButtonGererPositions = new javax.swing.JButton();
+        jButtonGenererCV1 = new javax.swing.JButton();
         nomMenuBar = new javax.swing.JMenuBar();
-        fileMenu = new javax.swing.JMenu();
-        jMenuItemInscription = new javax.swing.JMenuItem();
+        fileMenuLogiciel = new javax.swing.JMenu();
         connexionMenuItem = new javax.swing.JMenuItem();
         deconnexionMenuItem = new javax.swing.JMenuItem();
         SortieMenuItem = new javax.swing.JMenuItem();
-        aideMenu = new javax.swing.JMenu();
-        aproposMenuItem = new javax.swing.JMenuItem();
+        jMenuGerer = new javax.swing.JMenu();
+        jMenuItemInfosPersos = new javax.swing.JMenuItem();
+        jMenuItemFormations = new javax.swing.JMenuItem();
         nomjMenu = new javax.swing.JMenu();
 
-        jMenuItem1.setText("jMenuItem1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        desktopPane.setBackground(new java.awt.Color(255, 255, 255));
-        desktopPane.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jButtonInscription.setText("S'inscrire");
-        jButtonInscription.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInscriptionActionPerformed(evt);
-            }
-        });
-        desktopPane.add(jButtonInscription);
-        jButtonInscription.setBounds(150, 40, 130, 23);
+        jDesktopPaneAccueil.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPaneAccueil.setBorder(new javax.swing.border.MatteBorder(null));
 
         jButtonConnexion.setText("Se connecter");
         jButtonConnexion.addActionListener(new java.awt.event.ActionListener() {
@@ -87,22 +91,153 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 jButtonConnexionActionPerformed(evt);
             }
         });
-        desktopPane.add(jButtonConnexion);
-        jButtonConnexion.setBounds(150, 80, 130, 23);
 
-        fileMenu.setMnemonic('f');
-        fileMenu.setText("Etudiants");
+        jDesktopPaneAccueil.setLayer(jButtonConnexion, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jMenuItemInscription.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItemInscription.setText("Inscription");
-        jMenuItemInscription.addActionListener(new java.awt.event.ActionListener() {
+        org.jdesktop.layout.GroupLayout jDesktopPaneAccueilLayout = new org.jdesktop.layout.GroupLayout(jDesktopPaneAccueil);
+        jDesktopPaneAccueil.setLayout(jDesktopPaneAccueilLayout);
+        jDesktopPaneAccueilLayout.setHorizontalGroup(
+            jDesktopPaneAccueilLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneAccueilLayout.createSequentialGroup()
+                .add(128, 128, 128)
+                .add(jButtonConnexion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
+        );
+        jDesktopPaneAccueilLayout.setVerticalGroup(
+            jDesktopPaneAccueilLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneAccueilLayout.createSequentialGroup()
+                .add(129, 129, 129)
+                .add(jButtonConnexion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(148, Short.MAX_VALUE))
+        );
+
+        jDesktopPaneEmploye.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPaneEmploye.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jButtonGenererCV.setText("Generer un CV");
+        jButtonGenererCV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemInscriptionActionPerformed(evt);
+                jButtonGenererCVActionPerformed(evt);
             }
         });
-        fileMenu.add(jMenuItemInscription);
 
-        connexionMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jDesktopPaneEmploye.setLayer(jButtonGenererCV, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        org.jdesktop.layout.GroupLayout jDesktopPaneEmployeLayout = new org.jdesktop.layout.GroupLayout(jDesktopPaneEmploye);
+        jDesktopPaneEmploye.setLayout(jDesktopPaneEmployeLayout);
+        jDesktopPaneEmployeLayout.setHorizontalGroup(
+            jDesktopPaneEmployeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneEmployeLayout.createSequentialGroup()
+                .add(68, 68, 68)
+                .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+        jDesktopPaneEmployeLayout.setVerticalGroup(
+            jDesktopPaneEmployeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneEmployeLayout.createSequentialGroup()
+                .add(74, 74, 74)
+                .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        jDesktopPaneDirigeant.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPaneDirigeant.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jButtonInscription.setText("Créer un employé");
+        jButtonInscription.setAlignmentY(0.0F);
+        jButtonInscription.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInscriptionActionPerformed(evt);
+            }
+        });
+
+        jButtonGererRoles.setText("Gérer les rôles");
+        jButtonGererRoles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGererRolesActionPerformed(evt);
+            }
+        });
+
+        jButtonGenererCV2.setText("Générer un CV");
+        jButtonGenererCV2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenererCV2ActionPerformed(evt);
+            }
+        });
+
+        jDesktopPaneDirigeant.setLayer(jButtonInscription, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPaneDirigeant.setLayer(jButtonGererRoles, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPaneDirigeant.setLayer(jButtonGenererCV2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        org.jdesktop.layout.GroupLayout jDesktopPaneDirigeantLayout = new org.jdesktop.layout.GroupLayout(jDesktopPaneDirigeant);
+        jDesktopPaneDirigeant.setLayout(jDesktopPaneDirigeantLayout);
+        jDesktopPaneDirigeantLayout.setHorizontalGroup(
+            jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneDirigeantLayout.createSequentialGroup()
+                .add(129, 129, 129)
+                .add(jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonGenererCV2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(jButtonGererRoles, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jButtonInscription, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                .addContainerGap(141, Short.MAX_VALUE))
+        );
+        jDesktopPaneDirigeantLayout.setVerticalGroup(
+            jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneDirigeantLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jButtonGenererCV2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(18, 18, 18)
+                .add(jButtonInscription, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(18, 18, 18)
+                .add(jButtonGererRoles, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(25, 25, 25))
+        );
+
+        jDesktopPaneResponsable.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPaneResponsable.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jButtonGererPositions.setText("Gérer les positions");
+        jButtonGererPositions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGererPositionsActionPerformed(evt);
+            }
+        });
+
+        jButtonGenererCV1.setText("Générer un CV");
+        jButtonGenererCV1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenererCV1ActionPerformed(evt);
+            }
+        });
+
+        jDesktopPaneResponsable.setLayer(jButtonGererPositions, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPaneResponsable.setLayer(jButtonGenererCV1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        org.jdesktop.layout.GroupLayout jDesktopPaneResponsableLayout = new org.jdesktop.layout.GroupLayout(jDesktopPaneResponsable);
+        jDesktopPaneResponsable.setLayout(jDesktopPaneResponsableLayout);
+        jDesktopPaneResponsableLayout.setHorizontalGroup(
+            jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneResponsableLayout.createSequentialGroup()
+                .add(127, 127, 127)
+                .add(jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonGenererCV1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonGererPositions, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
+        jDesktopPaneResponsableLayout.setVerticalGroup(
+            jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jDesktopPaneResponsableLayout.createSequentialGroup()
+                .add(50, 50, 50)
+                .add(jButtonGererPositions, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(18, 18, 18)
+                .add(jButtonGenererCV1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        fileMenuLogiciel.setMnemonic('f');
+        fileMenuLogiciel.setText("Logiciel");
+
         connexionMenuItem.setMnemonic('o');
         connexionMenuItem.setText("Connexion");
         connexionMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +245,8 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 connexionMenuItemActionPerformed(evt);
             }
         });
-        fileMenu.add(connexionMenuItem);
+        fileMenuLogiciel.add(connexionMenuItem);
 
-        deconnexionMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
         deconnexionMenuItem.setMnemonic('s');
         deconnexionMenuItem.setText("Déconnexion");
         deconnexionMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +254,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 deconnexionMenuItemActionPerformed(evt);
             }
         });
-        fileMenu.add(deconnexionMenuItem);
+        fileMenuLogiciel.add(deconnexionMenuItem);
 
         SortieMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         SortieMenuItem.setMnemonic('x');
@@ -130,19 +264,29 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 SortieMenuItemActionPerformed(evt);
             }
         });
-        fileMenu.add(SortieMenuItem);
+        fileMenuLogiciel.add(SortieMenuItem);
 
-        nomMenuBar.add(fileMenu);
+        nomMenuBar.add(fileMenuLogiciel);
 
-        aideMenu.setMnemonic('h');
-        aideMenu.setText("Aide");
+        jMenuGerer.setText("Gérer");
 
-        aproposMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
-        aproposMenuItem.setMnemonic('c');
-        aproposMenuItem.setText("A propos");
-        aideMenu.add(aproposMenuItem);
+        jMenuItemInfosPersos.setText("Infos personnelles");
+        jMenuItemInfosPersos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInfosPersosActionPerformed(evt);
+            }
+        });
+        jMenuGerer.add(jMenuItemInfosPersos);
 
-        nomMenuBar.add(aideMenu);
+        jMenuItemFormations.setText("Formations");
+        jMenuItemFormations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemFormationsActionPerformed(evt);
+            }
+        });
+        jMenuGerer.add(jMenuItemFormations);
+
+        nomMenuBar.add(jMenuGerer);
         nomMenuBar.add(nomjMenu);
 
         setJMenuBar(nomMenuBar);
@@ -151,11 +295,46 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(desktopPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+            .add(layout.createSequentialGroup()
+                .addContainerGap()
+                .add(jDesktopPaneAccueil)
+                .addContainerGap())
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(jDesktopPaneDirigeant)
+                    .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(jDesktopPaneResponsable)
+                    .add(20, 20, 20)))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(11, 11, 11)
+                    .add(jDesktopPaneEmploye)
+                    .add(11, 11, 11)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(desktopPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                .add(jDesktopPaneAccueil, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(0, 0, Short.MAX_VALUE))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(jDesktopPaneDirigeant, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(114, Short.MAX_VALUE)))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(jDesktopPaneResponsable, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(108, Short.MAX_VALUE)))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(59, 59, 59)
+                    .add(jDesktopPaneEmploye, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(60, Short.MAX_VALUE)))
         );
 
         pack();
@@ -180,11 +359,6 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.fenDeconnexion.setVisible(true);
     }//GEN-LAST:event_deconnexionMenuItemActionPerformed
 
-    private void jMenuItemInscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInscriptionActionPerformed
-        fenInscription = new Inscription(this, true);
-        this.fenInscription.setVisible(true);
-    }//GEN-LAST:event_jMenuItemInscriptionActionPerformed
-
     private void jButtonConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnexionActionPerformed
         this.fenConnexion = new Connexion(this, true);
         this.fenConnexion.setVisible(true);
@@ -194,7 +368,37 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         fenInscription = new Inscription(this, true);
         this.fenInscription.setVisible(true);
     }//GEN-LAST:event_jButtonInscriptionActionPerformed
-   
+
+    private void jButtonGererRolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGererRolesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGererRolesActionPerformed
+
+    private void jMenuItemInfosPersosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInfosPersosActionPerformed
+        fenGererInfosPersos = new GererInfosPersos(this, true);        
+        this.fenGererInfosPersos.setVisible(true);
+    }//GEN-LAST:event_jMenuItemInfosPersosActionPerformed
+
+    private void jButtonGererPositionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGererPositionsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGererPositionsActionPerformed
+
+    private void jButtonGenererCV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererCV1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGenererCV1ActionPerformed
+
+    private void jButtonGenererCV2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererCV2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGenererCV2ActionPerformed
+
+    private void jButtonGenererCVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererCVActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGenererCVActionPerformed
+
+    private void jMenuItemFormationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFormationsActionPerformed
+        fenGererFormations = new GererFormations(this, true);        
+        this.fenGererFormations.setVisible(true);
+    }//GEN-LAST:event_jMenuItemFormationsActionPerformed
+    
     public void connecte(String leNom) {
         //maj de l'etat de la connexion
         this.connecte = true;
@@ -202,12 +406,12 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.nomjMenu.setText("Connecté en tant que : " + leNom);
         this.nomjMenu.setEnabled(false);
     }
-
+    
     public void deconnecte() {
         this.connecte = false;
         this.nomjMenu.setText(null);
     }
-
+    
     public void majConnexion() {
         deconnexionMenuItem.setEnabled(this.connecte);
         connexionMenuItem.setEnabled(!this.connecte);
@@ -249,16 +453,23 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem SortieMenuItem;
-    private javax.swing.JMenu aideMenu;
-    private javax.swing.JMenuItem aproposMenuItem;
     private javax.swing.JMenuItem connexionMenuItem;
     private javax.swing.JMenuItem deconnexionMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JMenu fileMenu;
+    private javax.swing.JMenu fileMenuLogiciel;
     private javax.swing.JButton jButtonConnexion;
+    private javax.swing.JButton jButtonGenererCV;
+    private javax.swing.JButton jButtonGenererCV1;
+    private javax.swing.JButton jButtonGenererCV2;
+    private javax.swing.JButton jButtonGererPositions;
+    private javax.swing.JButton jButtonGererRoles;
     private javax.swing.JButton jButtonInscription;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItemInscription;
+    private javax.swing.JDesktopPane jDesktopPaneAccueil;
+    private javax.swing.JDesktopPane jDesktopPaneDirigeant;
+    private javax.swing.JDesktopPane jDesktopPaneEmploye;
+    private javax.swing.JDesktopPane jDesktopPaneResponsable;
+    private javax.swing.JMenu jMenuGerer;
+    private javax.swing.JMenuItem jMenuItemFormations;
+    private javax.swing.JMenuItem jMenuItemInfosPersos;
     private javax.swing.JMenuBar nomMenuBar;
     private javax.swing.JMenu nomjMenu;
     // End of variables declaration//GEN-END:variables

@@ -8,7 +8,7 @@ package appli_etudiants;
  *
  * @author nc
  */
-public class Etudiants extends Personne{
+public class Responsables extends Personne{
     private String login;
     private String mot_de_passe;
     
