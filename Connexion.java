@@ -184,13 +184,13 @@ public class Connexion extends javax.swing.JDialog {
 
                     switch (role) {
                         case "1":
-                            this.fenetre.setInterfaceGraphiqueDirigeantVisible();
+                            this.fenetre.setInterfaceGraphiqueEmployesVisible();
                             break;
                         case "2":
                             this.fenetre.setInterfaceGraphiqueResponsableVisible();
                             break;
                         case "3":
-                            this.fenetre.setInterfaceGraphiqueEmployesVisible();
+                            this.fenetre.setInterfaceGraphiqueDirigeantVisible();
                             break;
                         default:
                             JOptionPane.showMessageDialog(rootPane, "Impossible d'accéder à votre espace personnel, "

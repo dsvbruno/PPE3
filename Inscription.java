@@ -457,6 +457,7 @@ public class Inscription extends javax.swing.JDialog {
                     Integer lignesRetournees = requete.executeUpdate(reqsql);
                     if (lignesRetournees == 1) {
                         JOptionPane.showMessageDialog(rootPane, "Inscription réussie");
+                        this.setVisible(false);
                     }
                 }
 

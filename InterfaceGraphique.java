@@ -29,6 +29,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private InterfaceGraphique fenDirigeants;
     private GererInfosPersos fenGererInfosPersos;
     private GererFormations fenGererFormations;
+    private GererRoles fenGererRoles; 
 
     /**
      * constructeur : Creates new form InterfaceGraphique
@@ -102,7 +103,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             .add(jDesktopPaneAccueilLayout.createSequentialGroup()
                 .add(128, 128, 128)
                 .add(jButtonConnexion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         jDesktopPaneAccueilLayout.setVerticalGroup(
             jDesktopPaneAccueilLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -114,6 +115,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jDesktopPaneEmploye.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPaneEmploye.setBorder(new javax.swing.border.MatteBorder(null));
+        jDesktopPaneEmploye.setPreferredSize(new java.awt.Dimension(410, 300));
 
         jButtonGenererCV.setText("Generer un CV");
         jButtonGenererCV.addActionListener(new java.awt.event.ActionListener() {
@@ -131,18 +133,19 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             .add(jDesktopPaneEmployeLayout.createSequentialGroup()
                 .add(128, 128, 128)
                 .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         jDesktopPaneEmployeLayout.setVerticalGroup(
             jDesktopPaneEmployeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jDesktopPaneEmployeLayout.createSequentialGroup()
                 .add(123, 123, 123)
                 .add(jButtonGenererCV, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         jDesktopPaneDirigeant.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPaneDirigeant.setBorder(new javax.swing.border.MatteBorder(null));
+        jDesktopPaneDirigeant.setPreferredSize(new java.awt.Dimension(410, 300));
 
         jButtonInscription.setText("Créer un employé");
         jButtonInscription.setAlignmentY(0.0F);
@@ -181,7 +184,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                     .add(jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                         .add(jButtonGererRoles, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(jButtonInscription, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         jDesktopPaneDirigeantLayout.setVerticalGroup(
             jDesktopPaneDirigeantLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -225,7 +228,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 .add(jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jButtonGenererCV1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonGererPositions, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         jDesktopPaneResponsableLayout.setVerticalGroup(
             jDesktopPaneResponsableLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -299,22 +302,22 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jDesktopPaneAccueil, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                .add(jDesktopPaneAccueil)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
-                    .add(jDesktopPaneDirigeant)
+                    .add(jDesktopPaneDirigeant, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
                     .addContainerGap()))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
-                    .add(jDesktopPaneResponsable, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jDesktopPaneResponsable, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
                     .add(20, 20, 20)))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .add(11, 11, 11)
-                    .add(jDesktopPaneEmploye)
+                    .add(jDesktopPaneEmploye, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(11, 11, 11)))
         );
         layout.setVerticalGroup(
@@ -334,18 +337,23 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                     .addContainerGap(59, Short.MAX_VALUE)))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
-                    .add(59, 59, 59)
-                    .add(jDesktopPaneEmploye, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .add(jDesktopPaneEmploye, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 359, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 11, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Menu permettant de quitter l'application
+ * @param evt 
+ */
     private void SortieMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortieMenuItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_SortieMenuItemActionPerformed
-
+/**
+ * Menu permettant d'ouvrir la fenêtre de connexion
+ * @param evt 
+ */
     private void connexionMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connexionMenuItemActionPerformed
         /**
          * création de la fenetre de connexion et attachement de cette dernière
@@ -354,27 +362,42 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.fenConnexion = new Connexion(this, true);
         this.fenConnexion.setVisible(true);
     }//GEN-LAST:event_connexionMenuItemActionPerformed
-
+        /**
+         * Bouton permettant d'afficher la fenêtre de déconnexion
+         * @param evt 
+         */ 
     private void deconnexionMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deconnexionMenuItemActionPerformed
-        // TODO add your handling code here:
         fenDeconnexion = new Deconnexion(this, true);
         this.fenDeconnexion.setVisible(true);
     }//GEN-LAST:event_deconnexionMenuItemActionPerformed
-
+/**
+ * bouton permettant d'afficher la fenêtre de connexion
+ * @param evt 
+ */
     private void jButtonConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnexionActionPerformed
         this.fenConnexion = new Connexion(this, true);
         this.fenConnexion.setVisible(true);
     }//GEN-LAST:event_jButtonConnexionActionPerformed
-
+/**
+ * bouton permettant d'afficher la fenêtre de création d'un employé
+ * @param evt 
+ */
     private void jButtonInscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInscriptionActionPerformed
         fenInscription = new Inscription(this, true);
         this.fenInscription.setVisible(true);
     }//GEN-LAST:event_jButtonInscriptionActionPerformed
-
+/**
+ * bouton permettant d'afficher la fenêtre de gestion des rôles
+ * @param evt 
+ */
     private void jButtonGererRolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGererRolesActionPerformed
-        // TODO add your handling code here:
+        fenGererRoles = new GererRoles(this, true); 
+        this.fenGererRoles.setVisible(true);
     }//GEN-LAST:event_jButtonGererRolesActionPerformed
-
+/**
+ * menu permettant d'afficher la fenêtre de gestion des informations personnelles
+ * @param evt 
+ */
     private void jMenuItemInfosPersosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInfosPersosActionPerformed
         fenGererInfosPersos = new GererInfosPersos(this, true);
         this.fenGererInfosPersos.setVisible(true);
@@ -395,12 +418,20 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private void jButtonGenererCVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererCVActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGenererCVActionPerformed
-
+/**
+ * menu permettant d'afficher la fenêtre de gestion des formations
+ * @param evt 
+ */
     private void jMenuItemFormationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFormationsActionPerformed
         fenGererFormations = new GererFormations(this, true);
         this.fenGererFormations.setVisible(true);
     }//GEN-LAST:event_jMenuItemFormationsActionPerformed
 
+    /**
+     * fonction permettant de vérifier si la connexion a bien eu lieu et renvoyer 
+     * le nom de l'utilisateur connecté
+     * @param leNom 
+     */
     public void connecte(String leNom) {
         //maj de l'etat de la connexion
         this.connecte = true;
@@ -409,36 +440,63 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.nomjMenu.setEnabled(false);
     }
 
+    /**
+     * fonction permettant de se déconnectés 
+     */
     public void deconnecte() {
         this.connecte = false;
         this.nomjMenu.setText(null);
     }
 
+    /**
+     * fonction permettant de bloqué le bouton connexion lorsque l'on est déjà econnecté, 
+     * et débloque le bouton déconnexion
+     */
     public void majConnexion() {
         deconnexionMenuItem.setEnabled(this.connecte);
         connexionMenuItem.setEnabled(!this.connecte);
     }
 
+    /**
+     * fonction permettant d'afficher la fenêtre réservée aux dirigeants connectés
+     * et cachant la fenêtre d'accueil
+     */
     public void setInterfaceGraphiqueDirigeantVisible() {
         this.jDesktopPaneDirigeant.setVisible(true);
         this.jDesktopPaneAccueil.setVisible(false);
     }
 
+    /**
+     * fonction permettant d'afficher la fenêtre réservée aux responsables connectés
+     * et cachant la fenêtre d'accueil
+     */
     public void setInterfaceGraphiqueResponsableVisible() {
         this.jDesktopPaneResponsable.setVisible(true);
         this.jDesktopPaneAccueil.setVisible(false);
     }
 
+    /**
+     * fonction permettant d'afficher la fenêtre réservée aux employés connectés
+     * et cachant la fenêtre d'accueil
+     */
     public void setInterfaceGraphiqueEmployesVisible() {
         this.jDesktopPaneEmploye.setVisible(true);
         this.jDesktopPaneAccueil.setVisible(false);
     }
     
+    /**
+     * fonction permettant d'afficher de nouveau la fenêtre d'accueil 
+     * en cachant les fenêtres réservées aux dirigeants, responsables, et employés
+     */
         public void setInterfaceGraphiqueAccueilVisible() {
         this.jDesktopPaneAccueil.setVisible(true);
+        this.jDesktopPaneDirigeant.setVisible(false);
+        this.jDesktopPaneResponsable.setVisible(false);
+        this.jDesktopPaneEmploye.setVisible(false);
     }
 
     /**
+     * fonction main
      * @param args the command line arguments
      */
     public static void main(String args[]) {

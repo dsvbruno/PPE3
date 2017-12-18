@@ -17,6 +17,7 @@ public class GererFormations extends java.awt.Dialog {
     public GererFormations(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(parent);
     }
 
     /**
@@ -61,6 +62,12 @@ public class GererFormations extends java.awt.Dialog {
 
         jLabelPermis1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelPermis1.setText("Permis: ");
+
+        jTextFieldFormations1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFormations1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Valider les changements");
 
@@ -155,6 +162,10 @@ public class GererFormations extends java.awt.Dialog {
         setVisible(false);
         dispose();
     }//GEN-LAST:event_closeDialog
+
+    private void jTextFieldFormations1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFormations1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFormations1ActionPerformed
 
     /**
      * @param args the command line arguments
